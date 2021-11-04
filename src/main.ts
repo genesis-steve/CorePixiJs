@@ -12,10 +12,10 @@ import { GamePadManager } from 'src/core/GamePadManager';
 import { Controller } from 'src/ui/Controller';
 
 window.onload = () => {
-	new GmaeApplication();
+	new GameApplication();
 };
 
-export class GmaeApplication {
+export class GameApplication {
 
 	@Inject
 	protected viewport: Viewport;
