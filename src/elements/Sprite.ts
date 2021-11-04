@@ -1,6 +1,6 @@
-import { AngleDirection } from "src/config/GeneralInterface";
-import { IDisplayObject } from "src/elements/DisplayObject";
-import { TSMap } from "typescript-map";
+import { TSMap } from 'typescript-map';
+import { AngleDirection } from 'core/src/config/GeneralInterface';
+import { IDisplayObject } from 'core/src/elements/DisplayObject';
 
 export class Sprite extends PIXI.Sprite {
 

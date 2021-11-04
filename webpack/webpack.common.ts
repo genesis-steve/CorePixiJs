@@ -43,7 +43,7 @@ module.exports = {
 			Path.resolve( appDir, 'node_modules' )
 		],
 		alias: {
-			'src': Path.resolve( appDir, 'src/' ),
+			'core': Path.resolve( appDir, 'src/../' ),
 			'assets': Path.resolve( appDir, 'assets/' )
 		}
 	},

@@ -1,15 +1,15 @@
 import * as PIXI from 'pixi.js';
 import * as TWEEN from '@tweenjs/tween.js';
-window.PIXI = PIXI;
-import './style.css';
-import { IMainConfig, MainConfig } from 'src/config/MainConfig';
-import { AssetLoader } from 'src/utils/AssetLoader';
-import * as AssetList from 'src/config/AssetList';
-import { Viewport } from 'src/core/Viewport';
-import { KeyboardManager } from 'src/core/KeyboardManager';
 import { Inject } from 'typescript-ioc';
-import { GamePadManager } from 'src/core/GamePadManager';
-import { Controller } from 'src/ui/Controller';
+window.PIXI = PIXI;
+import 'core/src/style.css';
+import { IMainConfig, MainConfig } from 'core/src/config/MainConfig';
+import { AssetLoader } from 'core/src/utils/AssetLoader';
+import * as AssetList from 'core/src/config/AssetList';
+import { Viewport } from 'core/src/core/Viewport';
+import { KeyboardManager } from 'core/src/core/KeyboardManager';
+import { GamePadManager } from 'core/src/core/GamePadManager';
+import { Controller } from 'core/src/ui/Controller';
 
 window.onload = () => {
 	new GameApplication();
@@ -35,11 +35,11 @@ export class GameApplication {
 	protected controllerList: Array<Controller>;
 
 	constructor () {
+		this.setBindings();
 		this.appConfig = new MainConfig();
 		this.controllerList = new Array<Controller>();
 		document.title = this.appConfig.title;
 		document.body.style.overflow = 'hidden';
-		this.setBindings();
 		this.mainContainer = <HTMLDivElement> document.getElementById( 'mainContainer' );
 		this.viewport.width = this.appConfig.width;
 		this.viewport.height = this.appConfig.height;
