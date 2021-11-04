@@ -1,4 +1,4 @@
-import { Sprite } from 'src/elements/Sprite';
+import { Sprite } from 'core/src/elements/Sprite';
 
 
 export class CollisionSystem {

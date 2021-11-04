@@ -1,4 +1,4 @@
-import { IConfig } from 'src/ui/Config';
+import { IConfig } from 'core/src/ui/Config';
 
 export class View extends PIXI.Container {
 

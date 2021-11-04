@@ -1,5 +1,5 @@
 import * as MiniSignal from 'mini-signals';
-import { IAsset } from 'src/config/AssetList';
+import { IAsset } from 'core/src/config/AssetList';
 
 export class AssetLoader {
 

@@ -1,5 +1,5 @@
-import { Config, IConfig } from 'src/ui/Config';
-import { View } from 'src/ui/View';
+import { Config, IConfig } from 'core/src/ui/Config';
+import { View } from 'core/src/ui/View';
 
 export class Controller implements IController {
 

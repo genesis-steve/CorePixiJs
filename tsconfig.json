@@ -13,7 +13,12 @@
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"noUnusedLocals": false,
-		"baseUrl": "./"
+		"baseUrl": "./",
+		"paths": {
+			"core/src/*": [
+				"src/*"
+			]
+		}
 	},
 	"exclude": [
 		"node_modules"
