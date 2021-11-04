@@ -10,6 +10,7 @@ import { Viewport } from 'core/src/core/Viewport';
 import { KeyboardManager } from 'core/src/core/KeyboardManager';
 import { GamePadManager } from 'core/src/core/GamePadManager';
 import { Controller } from 'core/src/ui/Controller';
+import { IAsset } from 'core/src/config/AssetList';
 
 window.onload = () => {
 	new GameApplication();
@@ -44,7 +45,8 @@ export class GameApplication {
 		this.viewport.width = this.appConfig.width;
 		this.viewport.height = this.appConfig.height;
 		this.assetLoader = new AssetLoader();
-		this.assetLoader.loadResource( AssetList.list );
+		this.assetLoader.onCompleteSignal.add( this.onLoadAssetComplete, this );
+		this.assetLoader.loadResource( this.getAssetList() );
 		this.addListners();
 		this.tickStart();
 	}
@@ -53,8 +55,12 @@ export class GameApplication {
 		//
 	}
 
+	protected getAssetList (): Array<IAsset> {
+		return AssetList.list;
+	}
+
 	protected addListners (): void {
-		this.assetLoader.onCompleteSignal.add( this.onLoadAssetComplete, this );
+		//
 	}
 
 	protected onLoadAssetComplete (): void {
