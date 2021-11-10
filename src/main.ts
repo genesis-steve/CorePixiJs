@@ -86,10 +86,10 @@ export class GameApplication {
 		TWEEN.update();
 		this.updateKeyboard();
 		this.updateGamePad();
-		this.updateComponents();
-		requestAnimationFrame( () => {
+		const deltaTime: number = requestAnimationFrame( () => {
 			this.animate()
 		} );
+		this.updateComponents( deltaTime );
 	}
 
 	protected updateKeyboard (): void {
@@ -104,9 +104,9 @@ export class GameApplication {
 		this.gamePadManager.updateGamePad( gamepads[ 0 ] );
 	}
 
-	protected updateComponents (): void {
+	protected updateComponents ( deltaTime: number ): void {
 		this.controllerList.forEach( controller => {
-			controller.updateFrame();
+			controller.updateFrame( deltaTime );
 		} );
 	}
 
