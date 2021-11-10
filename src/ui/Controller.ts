@@ -38,37 +38,33 @@ export class Controller implements IController {
 	}
 
 	protected onKeyDown ( data: IKeyboardDownEventData ): void {
-		switch ( data.code ) {
-			//
-		}
+		// switch ( data.code ) {
+		// }
 	}
 
 	protected onKeyUp ( data: IKeyboardDownEventData ): void {
-		switch ( data.code ) {
-			//
-		}
+		// switch ( data.code ) {
+		// }
 	}
 
 	protected onKeyPress ( data: IKeyboardPressEventData ): void {
-		for ( let i: number = 0; i < data.buttons.length; i++ ) {
-			// const code: string = data.buttons[ i ].code;
-		}
+		// for ( let i: number = 0; i < data.buttons.length; i++ ) {
+		// 	const code: string = data.buttons[ i ].code;
+		// }
 	}
 
 	protected onGamePadButtonUpdate ( data: IGamePadButtonEventData ): void {
-		data.buttons.forEach( button => {
-			switch ( button.key ) {
-				//
-			}
-		} );
+		// data.buttons.forEach( button => {
+		// 	switch ( button.key ) {
+		// 	}
+		// } );
 	}
 
 	protected onGamePadAxesUpdate ( data: IGamePadAxesEventData ): void {
-		data.axes.forEach( axes => {
-			switch ( axes.key ) {
-				//
-			}
-		} );
+		// data.axes.forEach( axes => {
+		// 	switch ( axes.key ) {
+		// 	}
+		// } );
 	}
 
 	public updateFrame (): void {
