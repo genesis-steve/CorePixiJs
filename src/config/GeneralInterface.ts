@@ -4,3 +4,10 @@ export enum AngleDirection {
 	LEFT = 180,
 	UP = 270
 }
+
+export enum MoveDirection {
+	UP = 'UP',
+	DOWN = 'DOWN',
+	LEFT = 'LEFT',
+	RIGHT = 'RIGHT'
+}
