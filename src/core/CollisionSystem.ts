@@ -50,6 +50,13 @@ export class CollisionSystem {
 		return isHit;
 	}
 
+	public static isCollideCircle ( objectA: Sprite, objectB: Sprite ): boolean {
+		const diffX: number = ( objectA.getGlobalPosition().x - objectB.getGlobalPosition().x );
+		const diffY: number = ( objectA.getGlobalPosition().y - objectB.getGlobalPosition().y );
+		const isHit: boolean = ( diffX ** 2 + diffY ** 2 ) ** 0.5 < objectA.width / 2 + objectB.width / 2;
+		return isHit;
+	}
+
 }
 
 export enum CollisionDirection {
