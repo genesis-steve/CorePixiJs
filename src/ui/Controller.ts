@@ -67,11 +67,11 @@ export class Controller implements IController {
 		// } );
 	}
 
-	public updateFrame (): void {
+	public updateFrame ( deltaTime: number ): void {
 		//
 	}
 }
 
 export interface IController {
-	updateFrame: () => void;
+	updateFrame: ( deltaTime: number ) => void;
 }
